@@ -1,0 +1,16 @@
+Index: src/newFeature.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/newFeature.java b/src/newFeature.java
+--- a/src/newFeature.java	
++++ b/src/newFeature.java	(date 1671912299306)
+@@ -2,4 +2,7 @@
+     public newFeature(){
+         System.out.println("This is a new Feature");
+     }
++
++    public void nothing(){}
++
+ }
