@@ -1,8 +1,31 @@
-public class Main{
+import java.io.*;
+class Employee implements java.io.Serializable{
+    int x;
+    public Employee(){
+        x = 3;
+    }
+    public int getInt(){
+        return x;
+    }
+}
+public class Main {
     public static void main(String[] args) {
-        newFeature flag = new newFeature();
-        Test test = new Test();
+        Employee x = new Employee();
+        Employee y = null;
+        try (OutputStream f = new FileOutputStream("e.ser");
+             ObjectOutputStream os = new ObjectOutputStream(f);) {
+            os.writeObject(x);
+        } catch (IOException ignore) {
+        }
 
-        System.out.println("just made more modulation to main");
+        try (InputStream f = new FileInputStream("e.ser");
+             ObjectInputStream is = new ObjectInputStream(f);) {
+            y = (Employee) is.readObject();
+        } catch (IOException | ClassNotFoundException ex) {
+            System.err.println("err");
+        }
+
+        assert y != null;
+        System.out.println(y.getInt());
     }
 }
