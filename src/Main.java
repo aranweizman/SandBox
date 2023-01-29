@@ -28,4 +28,9 @@ public class Main {
         assert y != null;
         System.out.println(y.getInt());
     }
+
+    public static int algorithms(){
+        // implementation
+        return 3;
+    }
 }
