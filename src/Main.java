@@ -24,13 +24,11 @@ public class Main {
         } catch (IOException | ClassNotFoundException ex) {
             System.err.println("err");
         }
-
-        assert y != null;
-        System.out.println(y.getInt());
     }
 
     public static int algorithms(){
-        // implementation
+        // different implementation
         return 3;
     }
+    // more code
 }
